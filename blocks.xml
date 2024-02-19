@@ -2,28 +2,25 @@
   <variables>
     <variable id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</variable>
   </variables>
-  <block type="s4d_login" id="%f6{:2;HkJ{B1n$[K]t/" x="287" y="49">
+  <block type="s4d_login" id="%f6{:2;HkJ{B1n$[K]t/" x="915" y="-9">
     <value name="TOKEN">
-      <block type="frost_env" id="CfU?fNCd)]S#C[m1S+ZB">
+      <block type="frost_env" id="vwg;:L(tw|v?ov)^2koS">
         <value name="VALUE">
-          <shadow type="text" id="Kj2KeEk23AV_~v|nR:$h">
-            <field name="TEXT">token</field>
+          <shadow type="text" id="zcTC$(,Z_~b81x(?04Pi">
+            <field name="TEXT">TOKEN</field>
           </shadow>
-          <block type="text" id="B.a/ersl9IN`r!%#ODlN">
-            <field name="TEXT">MTIwODgxNTc5MjI4MDMwNTgwNQ.GJT_lv.wq2Oahz4Cdk1tTH3SJedwCDn53OCIkemu-BhyE</field>
-          </block>
         </value>
       </block>
     </value>
   </block>
-  <block type="frost_webserver" id=",^o3/8X~53*b:aOaaDyK" x="1137" y="49">
+  <block type="frost_webserver" id=",^o3/8X~53*b:aOaaDyK" x="904" y="76">
     <value name="URL">
       <shadow type="text" id="9d/!:;_I]{pRFNy:Q$]-">
         <field name="TEXT">This site was created to keep bot on 25/8</field>
       </shadow>
     </value>
   </block>
-  <block type="s4d_on_message" id="y55|A0GA4Vh6Ng}g}7[:" x="286" y="129">
+  <block type="s4d_on_message" id="y55|A0GA4Vh6Ng}g}7[:" x="419" y="228">
     <statement name="STATEMENTS">
       <block type="controls_if" id="@7()R:eAu8),2KaQQ:P?">
         <mutation else="1"></mutation>
@@ -68,44 +65,47 @@
         </value>
         <statement name="DO0">
           <block type="controls_if" id="ezb_POD0de~9?RWy?C3(">
+            <mutation else="1"></mutation>
             <value name="IF0">
-              <block type="logic_negate" id="hJNC+T:PQ6e51H9xIqH0">
-                <value name="BOOL">
-                  <block type="s4d_member_is_bot" id="g~-P+||#csufL/%8T0G`">
-                    <value name="MEMBER">
-                      <block type="s4d_message_author" id="~_?i3{g;NOR[lm_vw`sk"></block>
-                    </value>
-                  </block>
+              <block type="s4d_member_is_bot" id="g~-P+||#csufL/%8T0G`">
+                <value name="MEMBER">
+                  <block type="s4d_message_author" id="~_?i3{g;NOR[lm_vw`sk"></block>
                 </value>
               </block>
             </value>
             <statement name="DO0">
-              <block type="variables_set" id="F`UE?Wuhd(X^Z}l{D*4z">
+              <block type="jg_messages_react_to_message_with_reaction" id=")6]P0@igvGYIaaua`$#z">
+                <value name="MESSAGE">
+                  <block type="Message" id="0eQrZg=7t!QSNvY5~8:F"></block>
+                </value>
+                <value name="REACTION">
+                  <shadow type="text" id="m*mJu/:](-Pdzh2:40C=">
+                    <field name="TEXT">✅</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="variables_set" id="*=uloow_Y,ud;fyDvmK`">
                 <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
                 <value name="VALUE">
-                  <block type="s4d_message_content" id="-)1}w#yw~]0wNr(JEB3X"></block>
+                  <block type="s4d_message_content" id="F^N#mnK3O6imfja`lutq"></block>
                 </value>
                 <next>
-                  <block type="s4d_delete" id="t5]{6|Ln:)wMbkd;h7TI">
+                  <block type="jg_messages_delete_message" id="WjW7Y;ni?XQ+;!FqpZ)-">
+                    <value name="MESSAGE">
+                      <block type="Message" id="n@8f8*stz3C0eQkl{,1K"></block>
+                    </value>
                     <next>
-                      <block type="s4d_send_channel" id="87bVY_Kj8TfNN4tqrq{I">
+                      <block type="s4d_reply" id="t;O`_yE7^%PPPb+;](`_">
                         <value name="CONTENT">
-                          <block type="variables_get" id="B~[1Wf.(@7q+QW={[?WY">
+                          <shadow type="text" id="mzS*[kCI)3~^k9QhcSoe">
+                            <field name="TEXT">Hey!</field>
+                          </shadow>
+                          <block type="variables_get" id="gJ}s@%*II4faxb892GhM">
                             <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
                           </block>
                         </value>
-                        <value name="CHANNEL">
-                          <block type="s4d_message_channel" id="S-XFJlM:FsCgQG)XoRI+"></block>
-                        </value>
-                        <next>
-                          <block type="s4d_add_reaction" id="]I4w46U~Ri/Rh-}4*%^o">
-                            <value name="REACTION">
-                              <shadow type="text" id="$y6zj6LRa%S0YMJ!XWD^">
-                                <field name="TEXT">✅</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </next>
                       </block>
                     </next>
                   </block>
@@ -130,14 +130,55 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_react_added" id="D=LU;anE2fW,mp#aS^`P" x="934" y="444">
+  <block type="s4d_on_react_added" id="D=LU;anE2fW,mp#aS^`P" x="1203" y="602">
     <statement name="STATEMENTS">
-      <block type="controls_if" id="R6q{WbKFrF:qQYZjCen6">
-        <mutation else="1"></mutation>
+      <block type="controls_if" id="7[eKK#%wQmis?R:PfdnJ">
         <value name="IF0">
-          <block type="logic_operation" id="`AnCl#kPM+`K3;mf,g9L">
-            <field name="OP">AND</field>
+          <block type="logic_operation" id="i%mXBiVI:UJ-LT^F$+}0">
+            <field name="OP">OR</field>
             <value name="A">
+              <block type="s4d_includes" id="ILs+Bj*lw9#_idKDxKi{">
+                <value name="TEXT">
+                  <shadow type="text" id="RDsdzF$TBUW-K5s-4J6F">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="s4d_channel_ahq_name" id="jNr*Dnmr}=q!SN^hD=,+">
+                    <value name="SERVER">
+                      <block type="reaction_channel" id="DIazov#|fzuVYtkO:6uA"></block>
+                    </value>
+                  </block>
+                </value>
+                <value name="INCLUDES">
+                  <shadow type="text" id="OWXyzD,7dF8PL|ft|N#}">
+                    <field name="TEXT">todo</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="s4d_includes" id="hOI.Y,g*?ou2A(TJZ6(M">
+                <value name="TEXT">
+                  <shadow type="text" id="+!2UR*v!r3`r,8A@$o}F">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="s4d_channel_ahq_name" id="nA/#5Q+ufO;b;SUNNp?q">
+                    <value name="SERVER">
+                      <block type="reaction_channel" id="7pN#wXf*e5v8t|_x2XDE"></block>
+                    </value>
+                  </block>
+                </value>
+                <value name="INCLUDES">
+                  <shadow type="text" id="{wGpZzqvC%p||E~QDr2)">
+                    <field name="TEXT">checklist</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="R6q{WbKFrF:qQYZjCen6">
+            <value name="IF0">
               <block type="logic_negate" id="Z~bx}Wb(se85Yo:Ix+hq">
                 <value name="BOOL">
                   <block type="s4d_member_is_bot" id="~Ph%x.%TzRfCLzw=bXXP">
@@ -148,67 +189,174 @@
                 </value>
               </block>
             </value>
-            <value name="B">
-              <block type="logic_compare" id="7+V=e93}elJGBo17gvJL">
-                <field name="OP">EQ</field>
-                <value name="A">
-                  <block type="s4d_react_emoji" id="{D}6:y5FO!+]{jq9r,Ox"></block>
+            <statement name="DO0">
+              <block type="variables_set" id="g3]mF+GAzG]TZC-v21%y">
+                <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                <value name="VALUE">
+                  <block type="s4d_react_message" id="SJQmldSS8Qy#jzEawkT."></block>
                 </value>
-                <value name="B">
-                  <block type="text" id="**.NJhV#]rLtL(rW9b_p">
-                    <field name="TEXT">✅</field>
+                <next>
+                  <block type="jg_messages_edit_message_to_text" id="@g;#o-1Z76$xq;1D4nMz">
+                    <value name="MESSAGE">
+                      <block type="s4d_react_message" id="];!AGc5%UV[,/I{R(%xb"></block>
+                    </value>
+                    <value name="TEXT">
+                      <shadow type="text" id="[_aBJ?`B,ibh.c16S(}M">
+                        <field name="TEXT"></field>
+                      </shadow>
+                      <block type="text_join" id="$g($]iU/pCPIJU^UWF|C">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="jg_text_remake_paragraph_quotes" id=";`3v+~h^o1=1uLR!J8]:">
+                            <field name="TEXT">**COMPLETE** || </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="variables_get" id="DrLP%c_C9:j65+v(Z~^2">
+                            <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
                   </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_react_removed" id="|iyn7[]ginMkuLCX5P*]" x="725" y="1023">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="H(M4Mo~;#8u!O|d.ub^[">
+        <value name="IF0">
+          <block type="logic_operation" id="41OYFe#hv4X7Io~]{vKJ">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="s4d_includes" id="J@uXOuQs~p]$esohe*#V">
+                <value name="TEXT">
+                  <shadow type="text" id="RDsdzF$TBUW-K5s-4J6F">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="s4d_channel_ahq_name" id="5195x^+xPMl^n@5_Z;DY">
+                    <value name="SERVER">
+                      <block type="reaction_channel" id="$CjLm+^-gDgbci,O4c|H"></block>
+                    </value>
+                  </block>
+                </value>
+                <value name="INCLUDES">
+                  <shadow type="text" id="k78X*kYth+*w`iEX_mw^">
+                    <field name="TEXT">todo</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="s4d_includes" id="3bzcVk?~is%)!e$+MlL[">
+                <value name="TEXT">
+                  <shadow type="text" id="+!2UR*v!r3`r,8A@$o}F">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="s4d_channel_ahq_name" id="v7umT5Riw3^WPum+z{!P">
+                    <value name="SERVER">
+                      <block type="reaction_channel" id="U6$?-s9wH3C!k,5G4I2f"></block>
+                    </value>
+                  </block>
+                </value>
+                <value name="INCLUDES">
+                  <shadow type="text" id="%l`w]4N7).i7%yMWd2uw">
+                    <field name="TEXT">checklist</field>
+                  </shadow>
                 </value>
               </block>
             </value>
           </block>
         </value>
         <statement name="DO0">
-          <block type="jg_messages_edit_message_to_text" id="@g;#o-1Z76$xq;1D4nMz">
-            <value name="MESSAGE">
-              <block type="s4d_react_message" id="fb8si5~oh2GaREA#L*g2"></block>
-            </value>
-            <value name="TEXT">
-              <shadow type="text" id="[_aBJ?`B,ibh.c16S(}M">
-                <field name="TEXT"></field>
-              </shadow>
-              <block type="text_join" id="$g($]iU/pCPIJU^UWF|C">
-                <mutation items="2"></mutation>
-                <value name="ADD0">
-                  <block type="jg_text_remake_paragraph_quotes" id=";`3v+~h^o1=1uLR!J8]:">
-                    <field name="TEXT">**COMPLETE** </field>
+          <block type="controls_if" id="+yWA,AqU_8e36THi]`yX">
+            <value name="IF0">
+              <block type="logic_negate" id="$DVD,nv@q?#dsEpyJSJ[">
+                <value name="BOOL">
+                  <block type="s4d_member_is_bot" id="?`{Y)|%L#As)8vVx,r6h">
+                    <value name="MEMBER">
+                      <block type="s4d_react_member" id="}ys{8StZ=h~^KlB.$yQs"></block>
+                    </value>
                   </block>
                 </value>
-                <value name="ADD1">
-                  <block type="s4d_message_content" id="=YJel9HrM`|yh=CIs|zP"></block>
-                </value>
               </block>
             </value>
-          </block>
-        </statement>
-        <statement name="ELSE">
-          <block type="s4d_remove_all_reactions" id="{$Fa||P^1GxSzqo[Xkh3">
-            <value name="MESSAGE">
-              <block type="s4d_react_message" id="0gJpUUTj4NSA?%b/K5(/"></block>
-            </value>
-            <next>
-              <block type="jg_messages_react_to_message_with_reaction" id="%aR3./lG~eLvis/S9P*y">
-                <value name="MESSAGE">
-                  <block type="s4d_react_message" id="bM?_9Ya1OwH%7xl`r3+I"></block>
+            <statement name="DO0">
+              <block type="variables_set" id="IdZEX=fCiBEp[(htE^QO">
+                <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                <value name="VALUE">
+                  <block type="s4d_react_message" id="7Fbu^)r)d*-IC{64@NFA"></block>
                 </value>
-                <value name="REACTION">
-                  <shadow type="text" id="/^Z0c(8lh].+jnhvAI:q">
-                    <field name="TEXT">❌</field>
-                  </shadow>
-                </value>
+                <next>
+                  <block type="variables_set" id="zQsU$Dw}@FYRiWy$BNJz">
+                    <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                    <value name="VALUE">
+                      <block type="jg_text_remake_in_text_replace_with" id="ouUo1VZe{v993](n3*j+">
+                        <value name="ORIGIN">
+                          <shadow type="text" id="H~8|MTfd9KwJ;+d!6`Fj">
+                            <field name="TEXT">aaa</field>
+                          </shadow>
+                          <block type="variables_get" id="FSc;V,g|1UYq$_!]t?4d">
+                            <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                          </block>
+                        </value>
+                        <value name="REPLACE">
+                          <shadow type="text" id=",ljVP1+B0?AhSOc}UOzG">
+                            <field name="TEXT">**COMPLETE** || </field>
+                          </shadow>
+                        </value>
+                        <value name="WITH">
+                          <shadow type="text" id="rz?8hO2hhq,OiLx!FzSy">
+                            <field name="TEXT"> </field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="+mIU2aFfCx:1j/u?[-Mx">
+                        <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                        <value name="VALUE">
+                          <block type="text_trim" id=":~wfhB=3$RBlElDNF}dI">
+                            <field name="MODE">BOTH</field>
+                            <value name="TEXT">
+                              <shadow type="text" id="Tn`pT5gph;*zf$uU46-V">
+                                <field name="TEXT">abc</field>
+                              </shadow>
+                              <block type="variables_get" id="Tu}|TCyv)%p$/$|8LX}r">
+                                <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="jg_messages_edit_message_to_text" id="D_D+pE.zHE#9I|MO(x%g">
+                            <value name="MESSAGE">
+                              <block type="s4d_react_message" id="ow_29M.demO?A}?]N(r,"></block>
+                            </value>
+                            <value name="TEXT">
+                              <shadow type="text" id="[_aBJ?`B,ibh.c16S(}M">
+                                <field name="TEXT"></field>
+                              </shadow>
+                              <block type="variables_get" id="9{jHP%ql2`+Q.TQw(*Z!">
+                                <field name="VAR" id="aDa8^u3ZB#WDkT_gCC}e">tempMessage</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
-            </next>
+            </statement>
           </block>
         </statement>
       </block>
     </statement>
-  </block>
-  <block type="jg_text_remake_paragraph_quotes" id="aBL=Jy4mATY-cWv,D+54" disabled="true" x="1337" y="537">
-    <field name="TEXT"></field>
   </block>
 </xml>
