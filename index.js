@@ -98,7 +98,7 @@
 
   await s4d.client
     .login(
-      "MTIwODgxNTc5MjI4MDMwNTgwNQ.GJT_lv.wq2Oahz4Cdk1tTH3SJedwCDn53OCIkemu-BhyE",
+      "MTIwODgxNTc5MjI4MDMwNTgwNQ.G3g0Wd.eAXgjBaXFtB4IpvyV9MXNH_Ngis4om3kWFtqJU",
     )
     .catch((e) => {
       const tokenInvalid = true;
